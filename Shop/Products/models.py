@@ -30,7 +30,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits = 12, decimal_places = 2)
 
     Producer = models.ForeignKey(Producer,on_delete = models.CASCADE, null = True)
-    Category = models.ForeignKey(Category,on_delete = models.CASCADE, null = True)
+    Category = models.ForeignKey(Category,on_delete = models.CASCADE, null = True, blank = True)
 
     def __str__(self):
         return self.name
