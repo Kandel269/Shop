@@ -25,7 +25,5 @@ def category(request, id):
 
 def product(request, id):
     product_user = Product.objects.get(pk = id)
-    description = "<h1>" + str(product_user) + "</h1>" + \
-                  "<p>" + str(product_user.describe) + "</p>" + \
-                  "<p>" + str(product_user.price) + "</p>"
-    return HttpResponse(description)
+    data = {'product_user' : product_user}
+    return render(request, 'Product.html', data)

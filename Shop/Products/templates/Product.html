@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product_user.id }}</title>
+</head>
+<body>
+    {% if product_user.id %}
+        <h1> {{ product_user.name }} </h1>
+        <p> Producer : {{ product_user.producer }} </p>
+        <p> {{ product_user.describe }} </p>
+        <p> {{ product_user.price }} </p>
+
+    {% else %}
+        <p> Ukradli taki produkt i go nie znajdziesz żołnierzu </p>
+
+    {% endif %}
+
+
+</body>
+</html>
